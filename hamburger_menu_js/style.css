@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hamburger {
+    position: relative;
+    z-index: 1;
+}
+
+.main_menu {
+    display: none;
+}
+
+@media screen and (min-width: 992px) {
+    .hamburger{
+        display: none;
+    }
+
+    .main_menu {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 991.98px) {
+    .mobile_nav {
+        display: block;
+        height: 100vh;
+        width: 100%;
+        background-color: cadetblue;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .mobile_nav ul {
+        flex-direction: column;
+    }
+}
+
+
