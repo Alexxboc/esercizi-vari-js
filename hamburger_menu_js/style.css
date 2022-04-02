@@ -26,9 +26,9 @@
 @media screen and (max-width: 991.98px) {
     .mobile_nav {
         display: block;
-        height: 100vh;
+        height: 20vh;
         width: 100%;
-        background-color: cadetblue;
+        background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
         position: absolute;
         top: 0;
         left: 0;
