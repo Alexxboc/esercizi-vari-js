@@ -21,8 +21,8 @@ header {
 .icons {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -1rem;
     row-gap: 2rem;
+    justify-content: center;
 }
 
 .icon {
@@ -33,7 +33,14 @@ header {
     border-radius: 1rem;
     text-align: center;
     padding: 1.5rem;
+    text-transform: uppercase;
 }
+
+.icon i {
+    font-size: 35px;
+    margin-bottom: 0.5rem;
+}
+
 
 .logo {
     font-family: 'Rubik Moonrocks', cursive;
