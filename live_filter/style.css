@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ededed;
+}
+
+header {
+    padding: 1rem;
+
+}
+
+.container{
+    margin: 2rem auto;
+    max-width: 1440px;
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+    row-gap: 2rem;
+}
+
+.icon {
+    width: calc(100% / 5 - 1rem);
+    background-color: white;
+    box-shadow: 0 0 5px gray;
+    margin: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.logo {
+    font-family: 'Rubik Moonrocks', cursive;
+    font-size: 50px;
+}
+
+.filter {
+    background-color: cornflowerblue;
+    text-align: center;
+    padding: 2rem;
+}
