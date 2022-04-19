@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+header .logo {
+    font-size: 35px;
+}
+
+header button {
+    padding: 0 2rem;
+}
+
+main {
+    background-color: aquamarine;
+    height: calc(100vh - 105px);
+    display: flex;
+    align-items: center;
+
+}
+
+main .game_area {
+    margin: auto;
+    max-width: 1000px;
+}
+
+main .cells {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .cell {
+    aspect-ratio: 1 / 1;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
