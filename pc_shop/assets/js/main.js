@@ -54,9 +54,9 @@ const products = [
 
 console.log(products);
 
-const ssd = new Product('SSD 1TB Crucial Disk', 'Super fast SSD drive', 49.99, 'PC Hardware', './ssd.jpg')
-ssd.increaseLikes()
-console.log(ssd);
+// const ssd = new Product('SSD 1TB Crucial Disk', 'Super fast SSD drive', 49.99, 'PC Hardware', './ssd.jpg')
+// ssd.increaseLikes()
+// console.log(ssd);
 /**
  * 
  * @param {*} product 
@@ -129,25 +129,33 @@ document.querySelectorAll('.buy_now').forEach(element => {
     })
 })
 
-const counterElement = document.querySelectorAll('.counter')
-// console.log(counterElement);
-counterElement.forEach(element => {
-    // console.log(element);
-    let counterNumber = Number (element.innerHTML)
-    // console.log(counterNumber);
-    counterNumber.increaseLikes()
-    console.log(counterNumber);
-})
+// const counterElement = document.querySelectorAll('.counter')
+// // console.log(counterElement);
+// counterElement.forEach(element => {
+//     // console.log(element);
+//     let counterNumber = Number (element.innerHTML)
+//     // console.log(counterNumber);
+//     // counterNumber.increaseLikes()
+//     // console.log(counterNumber);
+// })
 
 const likeButton = document.querySelectorAll('.like')
-likeButton.forEach(element => {
+likeButton.forEach((element, index) => {
+    // console.log(index);
     element.addEventListener('click', function (event) {
         event.preventDefault()
-        console.log(this);
+        // console.log(this);
         this.classList.toggle('color_red')
+        const likesNumber = products[index].increaseLikes()
+        // console.log(likesNumber);
+        const counterElement = document.querySelector('.counter')
+        counterElement.innerHTML = likesNumber
+        
         
     })
 })
 
 
-  
+
+        
+
