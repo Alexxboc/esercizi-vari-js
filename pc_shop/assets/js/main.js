@@ -21,7 +21,7 @@ class NameClass {
 class Product {
     is_available = false
     // Special method constructor
-    constructor(name, description, price, category, image, likes = 0) {
+    constructor(name, description, price, category, image, likes = getRndInteger()) {
        this.name = name 
        this.description = description
        this.price = price 
@@ -152,18 +152,23 @@ likeButton.forEach((element, index) => {
         event.preventDefault()
         // console.log(this);
         this.classList.toggle('color_red')
-        const likesNumber = products[index].increaseLikes()
+        let likesNumber;
         console.log(likesNumber);
         if(this.classList.contains('color_red')) {
+            likesNumber = products[index].increaseLikes()
             counterElement[index].innerHTML = likesNumber
         } else {
-            counterElement[index].innerHTML = likesNumber - 1
+            likesNumber = products[index].decreaseLikes()
+            counterElement[index].innerHTML = likesNumber
         }
-        
-        
         
     })
 })
+        
+function getRndInteger() {
+    return Math.floor(Math.random() * 1000 )
+  }
+        
 
 
 
