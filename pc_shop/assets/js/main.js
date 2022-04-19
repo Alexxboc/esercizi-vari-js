@@ -38,6 +38,10 @@ class Product {
         return this.likes += 1
     }
 
+    decreaseLikes() {
+        return this.likes -= 1
+    }
+
 }
 
 // const mouse = new Product('Anker Vertical Mouse', 'compy vertical mouse', 40.99, '', 'black', 'pc accessories', 0)
@@ -139,6 +143,8 @@ document.querySelectorAll('.buy_now').forEach(element => {
 //     // console.log(counterNumber);
 // })
 
+let counterElement = document.querySelectorAll('.counter')
+
 const likeButton = document.querySelectorAll('.like')
 likeButton.forEach((element, index) => {
     // console.log(index);
@@ -147,9 +153,13 @@ likeButton.forEach((element, index) => {
         // console.log(this);
         this.classList.toggle('color_red')
         const likesNumber = products[index].increaseLikes()
-        // console.log(likesNumber);
-        const counterElement = document.querySelector('.counter')
-        counterElement.innerHTML = likesNumber
+        console.log(likesNumber);
+        if(this.classList.contains('color_red')) {
+            counterElement[index].innerHTML = likesNumber
+        } else {
+            counterElement[index].innerHTML = likesNumber - 1
+        }
+        
         
         
     })
