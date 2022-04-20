@@ -1,3 +1,4 @@
+import Product from "../classes/Product.js";
 /* Strutture dati avanzate */
 
 /* Class expression - not hoisted
@@ -18,31 +19,31 @@ class NameClass {
 
 */ 
 
-class Product {
-    is_available = false
-    // Special method constructor
-    constructor(name, description, price, category, image, likes = getRndInteger()) {
-       this.name = name 
-       this.description = description
-       this.price = price 
-       this.image = image
-       this.category = category
-       this.likes = likes
-    }
+// class Product {
+//     is_available = false
+//     // Special method constructor
+//     constructor(name, description, price, category, image, likes = getRndInteger()) {
+//        this.name = name 
+//        this.description = description
+//        this.price = price 
+//        this.image = image
+//        this.category = category
+//        this.likes = likes
+//     }
 
-    // Class methods
-    /**
-     * Increases the likes current product instance
-     */
-    increaseLikes() {
-        return this.likes += 1
-    }
+//     // Class methods
+//     /**
+//      * Increases the likes current product instance
+//      */
+//     increaseLikes() {
+//         return this.likes += 1
+//     }
 
-    decreaseLikes() {
-        return this.likes -= 1
-    }
+//     decreaseLikes() {
+//         return this.likes -= 1
+//     }
 
-}
+// }
 
 // const mouse = new Product('Anker Vertical Mouse', 'compy vertical mouse', 40.99, '', 'black', 'pc accessories', 0)
 
@@ -143,7 +144,7 @@ document.querySelectorAll('.buy_now').forEach(element => {
 //     // console.log(counterNumber);
 // })
 
-let counterElement = document.querySelectorAll('.counter')
+const counterElement = document.querySelectorAll('.counter')
 
 const likeButton = document.querySelectorAll('.like')
 likeButton.forEach((element, index) => {
@@ -153,7 +154,6 @@ likeButton.forEach((element, index) => {
         // console.log(this);
         this.classList.toggle('color_red')
         let likesNumber;
-        console.log(likesNumber);
         if(this.classList.contains('color_red')) {
             likesNumber = products[index].increaseLikes()
             counterElement[index].innerHTML = likesNumber
@@ -165,10 +165,11 @@ likeButton.forEach((element, index) => {
     })
 })
         
-function getRndInteger() {
+ export function getRndInteger() {
     return Math.floor(Math.random() * 1000 )
   }
-        
+
+
 
 
 
